@@ -8,7 +8,7 @@
             }
 
             ul li {     /*all the li that are contained in ol*/
-                color: greenyellow;
+                color: rgb(77, 126, 3);
             }
 
             ul > li {   /*only the immediate children of ul and not grandchildren unlike the case above*/
@@ -42,6 +42,12 @@
             p::selection {      /*when this is selected/highlighted | psuedo-element*/
                 color: darkblue;
                 background-color: salmon;
+            }
+
+            @media print {      /*when printing the page, check results in print preview*/
+                .screen-only {
+                    display: none;
+                }
             }
 
         </style>
@@ -148,5 +154,17 @@
             </div>
         </form>
         <button>Click me!!!!</button>
+        <div>
+            <h1>Responsive Design</h1>
+            <ul>
+                <li>viewport</li>
+                <li>Media Queries</li>
+                <li>Flexbox</li>
+                <li>Grids</li>
+            </ul>
+            <p>This is a pragraph.</p>
+            <p>This is another paragraph.</p>
+            <p class="screen-only">This paragraph won't appear when you print this page.</p>
+        </div>
     </body>
 </html>
