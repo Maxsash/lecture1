@@ -1,3 +1,4 @@
+/*Can put sass on 'watch mode' as well to avoid manual re-compilation*/
 $color: red;
 
 ul {
@@ -9,4 +10,42 @@ ol {
     font-size: 18px;
     color: $color;
 }
-/*Can put sass on 'watch mode' as well to avoid manual re-compilation*/
+
+/*Nesting*/
+div {
+    font-size: 18px;
+
+    p {
+        color: blue;
+    }
+
+    ul {
+        color: green;
+    }
+}
+
+/*Inheritance*/
+/*% lets us define a template which can be inherited by others*/
+%message {
+    font-family: sans-sarif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.success {
+    @extend %message;
+    background-color: green;
+}
+
+.warning {
+    @extend %message;
+    background-color: orange;
+}
+
+.error {
+    @extend %message;
+    background-color: red;
+}
