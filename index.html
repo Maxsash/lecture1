@@ -2,6 +2,28 @@
 <html>
     <head>
         <title>Test</title>
+        <style>
+            h1, h2 {     /*applies to both h1 and h2*/
+                color: red; 
+            }
+
+            ul li {     /*all the li that are contained in ol*/
+                color: greenyellow;
+            }
+
+            ul > li {   /*only the immediate children of ul and not grandchildren unlike the case above*/
+                font-weight: bold;
+            }
+
+            input[type=text] {  /*targetting specific attributes of a tag*/
+                background-color: goldenrod;
+            }
+
+            input[type=number] {
+                background-color: indianred;
+            }
+
+        </style>
     </head>
     <body>
         Hello, there!
@@ -28,6 +50,11 @@
         <ul>
             <li><a href="#section1">Section 1</a></li>
             <li><a href="#section2">Section 2</a></li>
+            <ol>
+                <li>Sublist item 1</li>
+                <li>Can also call them.......</li>
+                <li>Nested list</li>
+            </ol>
             <li><a href="#section3">Section 3</a></li>
         </ul>
         <h2 id="section1">Section 1</h2>
@@ -76,6 +103,7 @@
             <div>
                 <input name="name" type="text" placeholder="Name">
                 <input name="password" type="password" placeholder="Password">
+                <input name="age" type="number" placeholder="42">
             </div>
 
             <div>
