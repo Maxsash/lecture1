@@ -30,8 +30,18 @@
                 background-color: orchid;
             }
 
-            button:hover {      /* on mouse hover*/
+            button:hover {      /* on mouse hover| psuedo-class*/
                 background-color: orange;
+            }
+
+            a::before {     /*apply this BEFORE the contents of 'a'. Can also use ::after | psuedo-element*/
+                content: "\21d2 Click here: ";
+                font-weight: bolder;
+            }
+
+            p::selection {      /*when this is selected/highlighted | psuedo-element*/
+                color: darkblue;
+                background-color: salmon;
             }
 
         </style>
